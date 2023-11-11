@@ -1,0 +1,7 @@
+source env/bin/activate
+
+if [ $1 = ext ]; then
+    python3 manage.py runserver  $(ipconfig getifaddr en0):8000
+else
+    python3 manage.py runserver
+fi
